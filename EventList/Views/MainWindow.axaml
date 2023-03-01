@@ -1,0 +1,224 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EventList.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:localM="clr-namespace:EventList.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1024"
+		Height="800" Width="1024"
+        x:Class="EventList.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="EventListByPsixoforkk">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+	
+    <Window.Resources>
+        <vm:BitmapAssetValueConverter x:Key="variableImage"/>
+    </Window.Resources>
+
+    <Window.DataTemplates>
+        <DataTemplate DataType="{x:Type localM:CityEvent}">
+			<Border BorderBrush="Blue" BorderThickness="2" Margin="10, 10" CornerRadius="10">
+                <Grid RowDefinitions="200, 220" ColumnDefinitions="308">
+                    <Image Grid.Row="0" Height="200" Width="200" Source="{Binding ImagePath, Converter={StaticResource variableImage}}"/>
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Classes="T2" TextWrapping="Wrap" FontWeight="Bold" FontSize="20" Text="{Binding Title1}"/>
+                        <TextBlock Classes="T2" TextWrapping="Wrap" Text="{Binding Ddescription}"/>
+                        <TextBlock Classes="T2" FontWeight="Bold" FontSize="20" Text="{Binding Ddate}" />
+                        <TextBlock Classes="T2" TextWrapping="Wrap" Text="{Binding Ccategory}" />
+                        <TextBlock Classes="T2" FontWeight="Bold" FontSize="20" Text="{Binding Price}" />
+                    </StackPanel>
+                </Grid>
+			</Border>
+        </DataTemplate>
+	</Window.DataTemplates>
+
+    <Window.Styles>
+        <Style Selector="TabItem">
+            <Setter Property="Margin" Value="56, 16, 0 ,0" />
+        </Style>
+		<Style Selector="TextBlock.T2">
+			<Setter Property="FontFamily" Value="Comic Sans MS" />
+			<Setter Property="TextAlignment" Value="Center" />
+		</Style>
+		
+        <Style Selector="TextBlock.T1">
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Comic Sans MS" />
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style Selector="TabItem">
+            <Setter Property="Background" Value="White" />
+        </Style>
+        <Style Selector="TabItem:selected">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="Blue" />
+            <Setter Property="BorderThickness" Value="3" />
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="12, -5" />
+            <Setter Property="FontWeight" Value="Black"/>
+        </Style>
+        <Style Selector="Image.IconIMG">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+    </Window.Styles>
+    <TabControl>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Для детей" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/kids_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Kids}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Спорт" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/sport_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Sport}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Культура" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/culture_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Culture}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Экскурсии" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/excursion_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Excursions}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Образ жизни" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/lifestyle_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Lifestyle}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem >
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Вечеринки" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/party_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Partys}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Образование" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/study_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Study}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Онлайн" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/online_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Online}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <Grid ColumnDefinitions="80, 160">
+                    <TextBlock Grid.Column="1" Text="Шоу" Classes="T1"/>
+                    <Image Classes="IconIMG" Grid.Column="0" Source="/Assets/icons/show_icon.png" />
+                </Grid>
+            </TabItem.Header>
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ItemsControl Items="{Binding Show}" Margin="0, 48">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
+	<!--Иконки с сайта flaticon.com-->
+</Window>
