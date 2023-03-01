@@ -89,7 +89,7 @@ namespace EventList.ViewModels
             bool flag = false;
             cityEvents = new List<CityEvent>();
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("..//..//..//Events.xml");
+            xmlDoc.Load("..//..//..//..//Events.xml");
             XmlElement ? xmlRoot = xmlDoc.DocumentElement;
             if (xmlRoot != null)
             {
