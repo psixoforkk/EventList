@@ -6,10 +6,10 @@
 		<Description>Avalonia is a cross-platform UI framework for dotnet, providing a flexible styling system and supporting a wide range of Operating Systems such as Windows, Linux, macOS. Avalonia is mature and production ready. </Description>
 		<Image>Assets/events/avalonia.png</Image>
 		<Date>08.02.2023</Date>
-		<CategoryItem>
-			<Category>Образование</Category>
-			<Category>Онлайн</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Образование</CategoryItem>
+			<CategoryItem>Онлайн</CategoryItem>
+		</Category>
 		<Price>1000₽</Price>
 	</Event>
 	<Event name="Масленица">
@@ -17,10 +17,10 @@
 		<Description>Масленица — восточнославянский традиционный праздник, отмечаемый в течение недели перед Великим постом, сохранивший в своей обрядовой основе ряд элементов дохристианской славянской мифологии.</Description>
 		<Image>Assets/events/maslenica.png</Image>
 		<Date>08.02.2023</Date>
-		<CategoryItem>
-			<Category>Культура</Category>
-			<Category>Для детей</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Культура</CategoryItem>
+			<CategoryItem>Для детей</CategoryItem>
+		</Category>
 		<Price></Price>
 	</Event>
 	<Event name="Космодрайв">
@@ -28,12 +28,12 @@
 		<Description>Выставка космоса для всей семьи Космодрайв</Description>
 		<Image>Assets/events/kosmodrive.png</Image>
 		<Date>02.02.2023</Date>
-		<CategoryItem>
-			<Category>Образование</Category>
-			<Category>Для детей</Category>
-			<Category>Экскурсии</Category>
-			<Category>Шоу</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Образование</CategoryItem>
+			<CategoryItem>Для детей</CategoryItem>
+			<CategoryItem>Экскурсии</CategoryItem>
+			<CategoryItem>Шоу</CategoryItem>
+		</Category>
 		<Price>649₽</Price>
 	</Event>
 	<Event name="Сказка про умку">
@@ -41,10 +41,10 @@
 		<Description>Из нашего детства белый медвежонок Умка — одно из самых ярких воспоминаний. Он добрый, наивный и конечно любознательный, как все дети. У него есть мудрая и справедливая мама, он находит себе друга — мальчика. И, безусловно, в белых льдах Арктики с ним происходят какие-то приключения.</Description>
 		<Image>Assets/events/umka.png</Image>
 		<Date>07.02.2023</Date>
-		<CategoryItem>
-			<Category>Для детей</Category>
-			<Category>Шоу</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Для детей</CategoryItem>
+			<CategoryItem>Шоу</CategoryItem>
+		</Category>
 		<Price>124₽</Price>
 	</Event>
 	<Event name="Диско 90-х">
@@ -52,10 +52,10 @@
 		<Description>Супер фестиваль популярной музыки «Диско 90-х» представляет лучшее из золотой коллекции хитов 90-х и 2000-х годов. Одно из главных музыкальных событий собирающее аншлаги стартовал в 2017 году и продолжает своё шествие по стране.</Description>
 		<Image>Assets/events/disco.png</Image>
 		<Date>07.02.2023</Date>
-		<CategoryItem>
-			<Category>Вечеринки</Category>
-			<Category>Шоу</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Вечеринки</CategoryItem>
+			<CategoryItem>Шоу</CategoryItem>
+		</Category>
 		<Price></Price>
 	</Event>
 	<Event name="Барнаул из Новосибирска">
@@ -63,9 +63,9 @@
 		<Description>Уникальный для Сибири город, образованный как промышленный центр. Именно здесь в первой половине 18 века известный предприниматель того времени Акинфий Демидов основал медеплавильный, а затем и сереброплавильный завод.</Description>
 		<Image>Assets/events/barnaul.png</Image>
 		<Date>23.02.2023</Date>
-		<CategoryItem>
-			<Category>Экскурсии</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Экскурсии</CategoryItem>
+		</Category>
 		<Price>18000₽</Price>
 	</Event>
 	<Event name="Гонка героев">
@@ -73,9 +73,9 @@
 		<Description>Гонка Героев - это крутой забег с препятствиями в твоем городе! Драйвовое приключение для каждого - ты испытаешь свои силы и поверишь, что для тебя нет ничего невозможного.</Description>
 		<Image>Assets/events/gonka.png</Image>
 		<Date>22.02.2023</Date>
-		<CategoryItem>
-			<Category>Спорт</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Спорт</CategoryItem>
+		</Category>
 		<Price>569₽</Price>
 	</Event>
 	<Event name="Профессиональный мастер-класс по Heartstone">
@@ -83,13 +83,13 @@
 		<Description>Ата</Description>
 		<Image>Assets/events/hearthstone.png</Image>
 		<Date>31.02.2023</Date>
-		<CategoryItem>
-			<Category>Спорт</Category>
-			<Category>Онлайн</Category>
-			<Category>Для детей</Category>
-			<Category>Образование</Category>
-			<Category>Шоу</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Спорт</CategoryItem>
+			<CategoryItem>Онлайн</CategoryItem>
+			<CategoryItem>Для детей</CategoryItem>
+			<CategoryItem>Образование</CategoryItem>
+			<CategoryItem>Шоу</CategoryItem>
+		</Category>
 		<Price>0,1₽</Price>
 	</Event>
 	<Event name="Йога тренинг">
@@ -97,10 +97,10 @@
 		<Description>Тренировки, правильное питание, реалибитация.</Description>
 		<Image>Assets/events/yoga.png</Image>
 		<Date>02.03.2023</Date>
-		<CategoryItem>
-			<Category>Образ жизни</Category>
-			<Category>Онлайн</Category>
-		</CategoryItem>
+		<Category>
+			<CategoryItem>Образ жизни</CategoryItem>
+			<CategoryItem>Онлайн</CategoryItem>
+		</Category>
 		<Price>1024₽</Price>
 	</Event>
 </CityEvents>

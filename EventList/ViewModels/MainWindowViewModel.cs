@@ -115,11 +115,11 @@ namespace EventList.ViewModels
                         {
                             cityevent.Ddate = childnode.InnerText;
                         }
-                        if (childnode.Name == "CategoryItem")
+                        if (childnode.Name == "Category")
                         {
                             foreach (XmlNode categorynode in childnode.ChildNodes)
                             {
-                                if (categorynode.Name == "Category")
+                                if (categorynode.Name == "CategoryItem")
                                 {
                                     if (flag)
                                     {
